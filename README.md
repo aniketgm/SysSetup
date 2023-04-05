@@ -4,7 +4,7 @@
 
 ### Initial setup
 
-1. Manually, install git. Why manually ? Because the setup script will be in the gh repo which will contain the __*installation*__ script.
+1. First, manually install git. So as to clone this repo and run the __installation__ script.
 	- Git can be installed using the *GitForWindows* installer Or through the commandline tool winget. Winget is now available in almost all latest windows installations, (Windows 10 and above)
 	- So preferable way: `winget install Git.Git`
 2. Once Git is installed, then clone the repo
