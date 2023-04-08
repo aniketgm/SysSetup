@@ -18,7 +18,7 @@
 	```
 5. This *setup* file will be responsible for installing necessary softwares and then it will automatically restart the system for the changes to take effect.
 6. Once the system restarts, the again launch Powershell and set the default profile of the terminal to Powershell 7.
-7. Relaunch the terminal as Admin again and run the next script. This script is responsible for setting up config files and other softwares. The script will again *Restart* the system.
+7. Relaunch the terminal as Admin again and run the next script: 
   ```powershell
   & post-install-setup.ps1
   ```
@@ -26,6 +26,8 @@
   - If WSL is not launched properly, you might want to check a few things:
     1. If alacritty is launched through shortcut, check the properties and the target config file set in the properties.
     2. Else, check the config file $Env:APPDATA\alacritty\alacritty.yml, for any issue in the configuration.
+
+__*NOTE*__: The `post-install-setup` script is responsible for setting up config files and other softwares. It will again *restart* the system.
 
 ## Linux
 
