@@ -41,14 +41,15 @@ function Install-Btop4Win {
 
 function Install-Fonts {
   Write-Output "-> Setting up fonts.."
-  mkdir ~/TempFonts
-  Push-Location ~/TempFonts
+  mkdir $Env:TEMP\FontSetup
+  Push-Location $Env:TEMP\FontSetup
   Write-Output "-> # Cloning nerd-fonts repo.."
   git clone "https://github.com/ryanoasis/nerd-fonts"
   Set-Location nerd-fonts
   Write-Output "-> # Installing fonts [JetBrainsMono,FiraCode].."
   ./install.ps1 JetBrainsMono, FiraCode -WindowsCompatibleOnly
   Pop-Location
+  Remove-Item $Env:TEMP\FontSetup
   Write-Output "-> # Done.."
   Write-Output ""
 }
