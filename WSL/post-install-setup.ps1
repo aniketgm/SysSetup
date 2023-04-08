@@ -49,7 +49,8 @@ function Install-Fonts {
   Write-Output "-> # Installing fonts [JetBrainsMono,FiraCode].."
   ./install.ps1 JetBrainsMono, FiraCode -WindowsCompatibleOnly
   Pop-Location
-  Remove-Item $Env:TEMP\FontSetup
+  Write-Output "-> # Cleaning up temp files.."
+  Remove-Item $Env:TEMP\FontSetup -Recurse
   Write-Output "-> # Done.."
   Write-Output ""
 }
