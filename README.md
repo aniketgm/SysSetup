@@ -18,7 +18,7 @@
 	```
 5. This *setup* file will be responsible for installing necessary softwares and then it will automatically restart the system for the changes to take effect.
 6. Once the system restarts, the again launch Powershell and set the default profile of the terminal to Powershell 7.
-7. Relaunch the terminal as Admin again and run the next script: 
+7. Relaunch the terminal as Admin again and run the next script:
   ```powershell
   & post-install-setup.ps1
   ```
