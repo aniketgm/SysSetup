@@ -7,7 +7,7 @@
 	- So preferable way: `winget install Git.Git`
 2. Once Git is installed, then clone the repo
 	```powershell
-	mkdir $USERPROFILE\GHRepos
+	mkdir $Env:USERPROFILE\Repos
 	git clone https://github.com/aniketgm/system-setup
 	```
 3. Now run the powershell script from an elevated terminal (Open As Administrator), inorder to avoid any permission issues.
@@ -17,7 +17,7 @@
 	& software-install.ps1
 	```
 5. This *setup* file will be responsible for installing necessary softwares and then it will automatically restart the system for the changes to take effect.
-6. Once the system restarts, the again launch Powershell and set the default profile of the terminal to Powershell 7.
+6. Once the system restarts, launch the Windows Terminal and set the default profile of the terminal to Powershell 7.
 7. Relaunch the terminal as Admin again and run the next script:
   ```powershell
   & post-install-setup.ps1
@@ -25,7 +25,7 @@
 8. Now after restart, launch Alacritty, which should launch WSL prompt.
   - If WSL is not launched properly, you might want to check a few things:
     1. If alacritty is launched through shortcut, check the properties and the target config file set in the properties.
-    2. Else, check the config file $Env:APPDATA\alacritty\alacritty.yml, for any issue in the configuration.
+    2. Else, check the config file `$Env:APPDATA\alacritty\alacritty.yml`, for any issue in the configuration.
 
 __*NOTE*__: The `post-install-setup` script is responsible for setting up config files and other softwares. It will again *restart* the system.
 
