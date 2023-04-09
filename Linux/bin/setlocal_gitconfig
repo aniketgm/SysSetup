@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+if [ -x /usr/bin/git ]; then
+    git config user.email "aniket.g.meshram@gmail.com"
+    git config user.name  "aniketgm"
+fi

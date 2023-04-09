@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+
+# Usage info
+show_usage() {
+cat << EOF
+Usage: ${0##*/} [-g] [-s SEARCH_STRING] [URL]
+
+Without any options the tool needs a Full URL e.g. 'https://www.google.com'
+Options:
+    -h                  show this help
+    -g                  open my github page
+    -s 'SEARCH_STRING'  google search the SEARCH_STRING
+EOF
+}
+
+if [ -n "${BROWSER}" ]; then
+    while [[ $# -gt 0 ]]; do
+        case $1 in
+            -h)
+                show_usage
+                exit 0
+                ;;
+            -g)
+                $BROWSER "https://github.com/aniketgm"
+                shift
+                exit 0
+                ;;
+            -s)
+                $BROWSER "https://www.google.com/search?q=$2"
+                shift
+                exit 0
+                ;;
+            -*)
+                echo "Unknown option $1"
+                exit 1
+                ;;
+            *)
+                $BROWSER $1
+                shift
+                exit 0
+                ;;
+        esac
+    done
+else
+    echo "BROWSER variable not set. Set it as a path to your default browser."
+fi
