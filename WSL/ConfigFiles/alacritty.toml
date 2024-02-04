@@ -1,0 +1,35 @@
+working_directory = "\\\\wsl.localhost\\Ubuntu-22.04\\home\\aniketgm"
+
+[window]
+decorations = "none"
+opacity = 1
+startup_mode = "Maximized"
+
+[font]
+size = 12.9
+
+  [font.normal]
+  family = "JetBrainsMono NF"
+  style = "Regular"
+
+  [font.bold]
+  family = "JetBrainsMono NF"
+  style = "Bold"
+
+  [font.italic]
+  family = "JetBrainsMono NF"
+  style = "Italic"
+
+  [font.bold_italic]
+  family = "JetBrainsMono NF"
+  style = "Bold Italic"
+
+[shell]
+program = "wsl"
+args = [ "-d Ubuntu-22.04" ]
+
+[[key_bindings]]
+key = "Space"
+mods = "Control"
+chars = "\u0000"
+
