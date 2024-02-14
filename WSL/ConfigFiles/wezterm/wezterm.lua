@@ -95,7 +95,7 @@ return {
   -- # All keymaps below
   -- # -----------------
   keys = {
-    { key = 'l', mods = 'ALT', action = act.ShowLauncher },
+    { key = 'l', mods = 'ALT',      action = act.ShowLauncher },
 
     -- Split Panes
     {
@@ -120,11 +120,11 @@ return {
     { key = 'p', mods = 'CTRL|ALT', action = act.SwitchWorkspaceRelative(-1) },
 
     -- Switch to windows. Defined only for 5 windows for now.
-    { key = '1', mods = 'ALT', action = act.ActivateTab(0) },
-    { key = '2', mods = 'ALT', action = act.ActivateTab(1) },
-    { key = '3', mods = 'ALT', action = act.ActivateTab(2) },
-    { key = '4', mods = 'ALT', action = act.ActivateTab(3) },
-    { key = '5', mods = 'ALT', action = act.ActivateTab(4) },
+    { key = '1', mods = 'ALT',      action = act.ActivateTab(0) },
+    { key = '2', mods = 'ALT',      action = act.ActivateTab(1) },
+    { key = '3', mods = 'ALT',      action = act.ActivateTab(2) },
+    { key = '4', mods = 'ALT',      action = act.ActivateTab(3) },
+    { key = '5', mods = 'ALT',      action = act.ActivateTab(4) },
     {
       key = 'LeftArrow',
       mods = 'CTRL|SHIFT',
